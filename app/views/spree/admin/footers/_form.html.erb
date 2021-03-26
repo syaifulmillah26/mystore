@@ -1,0 +1,57 @@
+<%= render partial: 'spree/shared/error_messages', locals: { target: @footer } %>
+<fieldset class="form-group no-border-bottom no-border-top">
+  <div class="row">
+    <div id="general_fields" class="col-7">
+      <div class="row">
+        <div class="col-12">
+
+          <%= f.field_container :company_name do %>
+            <%= f.label :company_name, class: 'required' %>
+            <%= f.text_field :company_name, class: 'fullwidth', required: true %>
+          <% end %>
+
+          <%= f.field_container :website do %>
+            <%= f.label :website, class: 'required' %>
+            <%= f.text_field :website, class: 'fullwidth', required: true %>
+          <% end %>
+
+          <%= f.field_container :address do %>
+            <%= f.label :address %><br />
+            <%= f.text_area :address, rows: 7, class: 'fullwidth' %>
+            <span class="info">
+              <%= t('spree.character_limit') %>
+            </span>
+          <% end %>
+
+        </div>
+      </div>
+    </div>
+
+    <div id="general_fields" class="col-5">
+      <div class="row">
+        <div class="col-12">
+          <%= f.field_container :facebook_url do %>
+            <%= f.label :facebook_url, class: 'required' %>
+            <%= f.text_field :facebook_url, class: 'fullwidth', required: true %>
+          <% end %>
+
+          <%= f.field_container :instagram_url do %>
+            <%= f.label :instagram_url, class: 'required' %>
+            <%= f.text_field :instagram_url, class: 'fullwidth', required: true %>
+          <% end %>
+
+          <%= f.field_container :twitter_url do %>
+            <%= f.label :twitter_url, class: 'required' %>
+            <%= f.text_field :twitter_url, class: 'fullwidth', required: true %>
+          <% end %>
+
+          <%= f.field_container :whatsapp_number do %>
+            <%= f.label :whatsapp_number, class: 'required' %>
+            <%= f.text_field :whatsapp_number, class: 'fullwidth', required: true %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</fieldset>

@@ -1,0 +1,21 @@
+<% content_for :tabs do %>
+  <nav>
+    <ul class="tabs" data-hook="admin_settings_checkout_tabs">
+      <% if can?(:show, Spree::Header) %>
+        <%= settings_tab_item plural_resource_name(Spree::Header), spree.admin_headers_path %>
+      <% end %>
+
+      <% if can?(:show, Spree::Footer) %>
+        <%= settings_tab_item plural_resource_name(Spree::Footer), spree.admin_footers_path %>
+      <% end %>
+      
+      <% if can?(:show, Spree::About) %>
+        <%= settings_tab_item plural_resource_name(Spree::About), spree.admin_abouts_path %>
+      <% end %>
+
+      <% if can?(:show, Spree::Testimony) %>
+        <%= settings_tab_item plural_resource_name(Spree::Testimony), spree.admin_testimonies_path %>
+      <% end %>
+    </ul>
+  </nav>
+<% end %>

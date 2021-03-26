@@ -1,0 +1,10 @@
+<%= render 'spree/admin/shared/settings_view_tabs' %>
+
+<% admin_breadcrumb(t('spree.configurations_view')) %>
+<% admin_breadcrumb(plural_resource_name(Spree::About)) %>
+
+
+<div class="no-objects-found">
+    <%= render 'spree/admin/shared/no_objects_found',
+                 resource: Spree::About,
+                 new_resource_url: new_object_url %>

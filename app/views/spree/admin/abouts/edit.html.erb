@@ -1,0 +1,15 @@
+<%= render 'spree/admin/shared/settings_view_tabs' %>
+
+<% admin_breadcrumb(t('spree.configurations_view')) %>
+<% admin_breadcrumb(plural_resource_name(Spree::About)) %>
+
+<%= render partial: 'spree/shared/error_messages', locals: { target: @about } %>
+
+<%= form_for [:admin, @about] do |f| %>
+  <fieldset class="no-border-top">
+  <%= render partial: 'form', locals: { f: f } %>
+  <div class="filter-actions">
+    <%= render partial: 'spree/admin/shared/edit_resource_links' %>
+  </div>
+</fieldset>
+<% end %>
